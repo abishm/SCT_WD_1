@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: #f4f7fb; color: #222; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #35b5df;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      color: #333;
+      background: linear-gradient(to right, #ffe3d8, #ffd0a1);
+    }
+
+    ul li a:hover {
+      background: linear-gradient(to right, #ffb347, #ffcc33);
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 110px 20px 80px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #222;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      max-width: 720px;
+    }
+
+    h1:not(#home h1) {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #4791a1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #3f9cbb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      background: #56cfea;
+      box-shadow: 0 0 12px rgba(63, 156, 222, 0.5);
+    }
+
+    .features {
+      background: linear-gradient(to right, #d0f0fd, #d2f8e5); /* New aqua-green */
+    }
+
+    .services {
+      background: linear-gradient(to right, #f9e4ff, #fbc2eb); /* New violet-pink */
+    }
+
+    .contact {
+      background: linear-gradient(to right, #f3e5f5, #e1bee7);
+    }
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 14px;
+      width: 300px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      background: #5ac8d9;
+    }
+
+    form {
+      margin-top: 50px;
+      background: rgb(68, 161, 192);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #57b5da;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
+      border-top: 1px solid #59bad0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #56a1e3;
+      margin: 0 5px;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      ul { flex-direction: column; width: 100%; }
+      ul li a { width: 100%; display: block; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">SkillElevate</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" data-aos="fade-up">
+    <h1>Welcome to SkillElevate </h1>
+    <p>Join SkillElevate, your personalized learning platform designed to upskill students and professionals through expertly curated content, hands-on experience, and real-world opportunities.</p>
+    <a href="#features" class="btn" data-aos="zoom-in">Explore Features</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features" data-aos="fade-up">
+    <h1>Platform Features</h1>
+    <div class="box-container">
+      <div class="box" data-aos="flip-left"><p>📚 2000+ Curated Courses across Tech, Business & Design.</p></div>
+      <div class="box" data-aos="flip-left"><p>📊 Real-time dashboards to track your learning progress.</p></div>
+      <div class="box" data-aos="flip-left"><p>🎓 Verifiable certificates recognized by recruiters.</p></div>
+      <div class="box" data-aos="flip-left"><p>🔍 AI-driven course suggestions tailored to you.</p></div>
+    </div>
+    <a href="#services" class="btn" data-aos="zoom-in">See Services</a>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services" data-aos="fade-up">
+    <h1>Services We Provide</h1>
+    <div class="box-container">
+      <div class="box" data-aos="fade-right"><p>👨‍🏫 One-on-One Mentorship with experts.</p></div>
+      <div class="box" data-aos="fade-left"><p>📝 Resume review & mock interview sessions.</p></div>
+      <div class="box" data-aos="fade-right"><p>🏢 Custom training solutions for companies.</p></div>
+      <div class="box" data-aos="fade-left"><p>🌐 Internship/job matching based on your profile.</p></div>
+    </div>
+    <a href="#contact" class="btn" data-aos="zoom-in">Contact Us</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h1>Contact Us</h1>
+    <p style="max-width: 600px; font-size: 1.1rem; margin-top: 10px;">
+      We'd love to hear from you! Fill out the form below or reach us directly.
+    </p>
+
+    <div class="box-container" style="margin-top: 50px; flex-wrap: wrap;">
+      <div class="box" data-aos="fade-right"><p>📧 <strong>Email:</strong><br>support@SkillElevate.com</p></div>
+      <div class="box" data-aos="fade-left"><p>📞 <strong>Phone:</strong><br>+91 99999 88888</p></div>
+      <div class="box" data-aos="fade-right"><p>📍 <strong>Address:</strong><br>TamilNadu, India – 500081</p></div>
+      <div class="box" data-aos="fade-left"><p>🕒 <strong>Hours:</strong><br>Mon–Sat, 9 AM – 6 PM</p></div>
+    </div>
+
+    <form data-aos="zoom-in">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Subject" />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 <strong>SkillElevate</strong>. All rights reserved.</p>
+    <p>
+      <a href="#home">Home</a> |
+      <a href="#features">Features</a> |
+      <a href="#services">Services</a> |
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
